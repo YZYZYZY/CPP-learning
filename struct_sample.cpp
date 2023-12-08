@@ -15,7 +15,7 @@ struct Books
 int main( )
 {
    Books Book1;        // 定义结构体类型 Books 的变量 Book1
-   Books Book2;        // 定义结构体类型 Books 的变量 Book2
+   Books Book2;        // 定义结构体类型 Books 的变量 Book2 其实在C++里面不需要struct，直接Books Book1就可以了
  
    // Book1 详述
    strcpy( Book1.title, "C++ 教程");

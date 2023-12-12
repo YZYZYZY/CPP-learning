@@ -115,7 +115,7 @@ void Logic()
     tailX[0] = x;
     tailY[0] = y;
 
-    //蛇尾部分的坐标等于蛇头部分的坐标
+    //蛇尾部分的坐标等于蛇头部分的坐标，是所有的坐标都要更新一次，然后把坐标有的地方都画出来，这样就实现了蛇的移动？
     for(int i=1; i<nTail; i++){
         prev2X = tailX[i];
         prev2Y = tailY[i];

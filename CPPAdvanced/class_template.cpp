@@ -22,6 +22,7 @@ class Stack {
 }; 
  
 template <class T>
+//为什么这里要写Stack<T>::?模版类的成员函数定义必须以这种形式写
 void Stack<T>::push (T const& elem) 
 { 
     // 追加传入元素的副本

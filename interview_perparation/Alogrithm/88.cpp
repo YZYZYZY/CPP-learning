@@ -28,6 +28,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n){
     }
 }
 //0ms
+//先将nums1的前m个元素存到一个临时数组中，然后将nums1和nums2合并到nums1中
 void merge2(vector<int>& nums1, int m, vector<int>& nums2, int n){
     vector<int> temp(nums1.begin(), nums1.begin()+m);
 

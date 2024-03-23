@@ -19,5 +19,7 @@ int main() {
     t1.join();
     t2.join();
 
+    std::cout.flush(); // 手动刷新缓冲区
+
     return 0;
 }

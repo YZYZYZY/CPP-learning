@@ -9,7 +9,6 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
-				"${fileDirname}/*.cpp", // 多文件源码需要添加所有的 源码文件 才能通过编译（这里是同目录下的所有cpp文件）
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 			],

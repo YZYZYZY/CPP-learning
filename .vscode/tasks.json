@@ -9,6 +9,9 @@
 				"-fdiagnostics-color=always",
 				"-g",
 				"${file}",
+				"${fileDirname}/*.cpp", // 多文件源码需要添加所有的 源码文件 才能通过编译（这里是同目录下的所有cpp文件）
+                "-pthread",             // 多线程编译（代码中用到了多线程）
+				"-lpthread",             // 多线程调试（代码中用到了多线程）
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 			],

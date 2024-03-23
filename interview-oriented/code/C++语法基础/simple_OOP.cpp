@@ -25,7 +25,7 @@ class Dog : public Animal{
 
 int main(){
     Dog mydog;
-    mydog.eat();.//没有使用虚函数，但是也算运行时多态
+    mydog.eat();//没有使用虚函数，但是也算运行时多态
     mydog.speak();
 
     Animal *p = &mydog;//运行时多态

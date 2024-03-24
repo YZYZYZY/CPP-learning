@@ -17,8 +17,6 @@ int main() {
     t1.join();
     t2.join();
 
-    
-
     std::cout << "Final count is " << count << std::endl;
 
     return 0;

@@ -1,18 +1,36 @@
-#include <algorithm>
-#include <vector>
 #include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Person {
+public:
+    string name;
+    int age;
+
+    // 构造函数
+    Person(string n, int a) : name(n), age(a) {}
+
+    // 重载 < 运算符，根据年龄进行排序
+    bool operator < (const Person& p) const {
+        return age < p.age;
+    }
+};
 
 int main() {
-    std::vector<int> nums = {4, 1, 3, 5, 2};
+    // 创建并初始化Person对象的vector
+    vector<Person> people;
+    people.push_back(Person("Alice", 30));
+    people.push_back(Person("Bob", 25));
+    people.push_back(Person("Charlie", 35));
 
-    // 使用 std::sort 对 nums 进行排序
-    std::sort(nums.begin(), nums.end());
+    // 使用std::sort根据年龄排序
+    sort(people.begin(), people.end());
 
-    // 输出排序后的数组
-    for (int num : nums) {
-        std::cout << num << " ";
+    // 输出排序后的Person对象
+    for(const auto& person : people) {
+        cout << person.name << " is " << person.age << " years old." << endl;
     }
-    std::cout << std::endl;
 
     return 0;
 }
